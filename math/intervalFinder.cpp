@@ -47,6 +47,8 @@ int main () {
     if (conjOrDis == 'c')  conj = true;
     else conj = false;
 
+    
+    // these need to be updated for disjoint sets
     if (!conj) {
         nint1 = min(fint1, sint1);
         nint2 = max(fint2, sint2);
@@ -55,7 +57,11 @@ int main () {
         print(nint1, nint2);
 
     } else {
-
+        nint1 = max(fint1, sint1);
+        nint2 = min(fint2, sint2);
+        cout << "Intersection of "; print(fint1, fint2);
+        cout << " and "; print(sint1, sint2); cout << "       " << endl;
+        print(nint1, nint2); 
     }
  
 
